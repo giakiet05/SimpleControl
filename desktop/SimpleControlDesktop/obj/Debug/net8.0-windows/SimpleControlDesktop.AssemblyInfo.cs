@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SimpleControlDesktop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15d26e48cb4bb6e08dd02758432d65974b1e1afd")]
 [assembly: System.Reflection.AssemblyProductAttribute("SimpleControlDesktop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SimpleControlDesktop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
