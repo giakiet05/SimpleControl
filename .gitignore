@@ -22,10 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.doc
+*.docx
+*.tmp
 
 .env
 
 todo.md
-*.doc
-*.docx
-*.tmp
