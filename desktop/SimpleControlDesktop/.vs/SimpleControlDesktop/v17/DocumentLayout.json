@@ -1,0 +1,127 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\programming\\SimpleControl\\desktop\\SimpleControlDesktop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{987D3407-CB36-4B0A-8738-A7F26248C4C4}|SimpleControlDesktop.csproj|d:\\programming\\simplecontrol\\desktop\\simplecontroldesktop\\server\\filehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{987D3407-CB36-4B0A-8738-A7F26248C4C4}|SimpleControlDesktop.csproj|solutionrelative:server\\filehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{987D3407-CB36-4B0A-8738-A7F26248C4C4}|SimpleControlDesktop.csproj|d:\\programming\\simplecontrol\\desktop\\simplecontroldesktop\\server\\websocketserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{987D3407-CB36-4B0A-8738-A7F26248C4C4}|SimpleControlDesktop.csproj|solutionrelative:server\\websocketserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{987D3407-CB36-4B0A-8738-A7F26248C4C4}|SimpleControlDesktop.csproj|d:\\programming\\simplecontrol\\desktop\\simplecontroldesktop\\server\\systemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{987D3407-CB36-4B0A-8738-A7F26248C4C4}|SimpleControlDesktop.csproj|solutionrelative:server\\systemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{987D3407-CB36-4B0A-8738-A7F26248C4C4}|SimpleControlDesktop.csproj|d:\\programming\\simplecontrol\\desktop\\simplecontroldesktop\\models\\commandmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{987D3407-CB36-4B0A-8738-A7F26248C4C4}|SimpleControlDesktop.csproj|solutionrelative:models\\commandmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{987D3407-CB36-4B0A-8738-A7F26248C4C4}|SimpleControlDesktop.csproj|d:\\programming\\simplecontrol\\desktop\\simplecontroldesktop\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{987D3407-CB36-4B0A-8738-A7F26248C4C4}|SimpleControlDesktop.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WebSocketServer.cs",
+              "DocumentMoniker": "D:\\programming\\SimpleControl\\desktop\\SimpleControlDesktop\\Server\\WebSocketServer.cs",
+              "RelativeDocumentMoniker": "Server\\WebSocketServer.cs",
+              "ToolTip": "D:\\programming\\SimpleControl\\desktop\\SimpleControlDesktop\\Server\\WebSocketServer.cs",
+              "RelativeToolTip": "Server\\WebSocketServer.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwDgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T13:51:42.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FileHandler.cs",
+              "DocumentMoniker": "D:\\programming\\SimpleControl\\desktop\\SimpleControlDesktop\\Server\\FileHandler.cs",
+              "RelativeDocumentMoniker": "Server\\FileHandler.cs",
+              "ToolTip": "D:\\programming\\SimpleControl\\desktop\\SimpleControlDesktop\\Server\\FileHandler.cs",
+              "RelativeToolTip": "Server\\FileHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T13:49:05.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\programming\\SimpleControl\\desktop\\SimpleControlDesktop\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
+              "ToolTip": "D:\\programming\\SimpleControl\\desktop\\SimpleControlDesktop\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwvzoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T13:35:58.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SystemController.cs",
+              "DocumentMoniker": "D:\\programming\\SimpleControl\\desktop\\SimpleControlDesktop\\Server\\SystemController.cs",
+              "RelativeDocumentMoniker": "Server\\SystemController.cs",
+              "ToolTip": "D:\\programming\\SimpleControl\\desktop\\SimpleControlDesktop\\Server\\SystemController.cs",
+              "RelativeToolTip": "Server\\SystemController.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAowGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T13:24:15.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CommandMessage.cs",
+              "DocumentMoniker": "D:\\programming\\SimpleControl\\desktop\\SimpleControlDesktop\\Models\\CommandMessage.cs",
+              "RelativeDocumentMoniker": "Models\\CommandMessage.cs",
+              "ToolTip": "D:\\programming\\SimpleControl\\desktop\\SimpleControlDesktop\\Models\\CommandMessage.cs",
+              "RelativeToolTip": "Models\\CommandMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T13:23:27.282Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

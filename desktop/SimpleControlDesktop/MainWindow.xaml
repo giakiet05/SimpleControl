@@ -1,0 +1,168 @@
+﻿<Window x:Class="SimpleControlDesktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleControlDesktop"
+        xmlns:views="clr-namespace:SimpleControlDesktop.Views"
+        xmlns:vms="clr-namespace:SimpleControlDesktop.ViewModels"
+        xmlns:custom="clr-namespace:ModalControl;assembly=ModalControl"
+        mc:Ignorable="d"
+        Title="Simple Control" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vms:DisconnectConfirmModalViewModel}">
+            <views:DisconnectConfirmModal/>
+        </DataTemplate>
+
+        <!-- Button Styles (unchanged) -->
+        <Style x:Key="ModernButton" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="15,8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Primary Button Style -->
+        <Style x:Key="PrimaryButton" TargetType="Button" BasedOn="{StaticResource ModernButton}">
+            <Setter Property="Background" Value="#2196F3"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1976D2"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#1565C0"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Danger Button Style -->
+        <Style x:Key="DangerButton" TargetType="Button" BasedOn="{StaticResource ModernButton}">
+            <Setter Property="Background" Value="#dc3545"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#c82333"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#bd2130"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Navbar -->
+        <Grid Grid.Row="0" Background="#F5F5F5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Logo -->
+            <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="20,0,0,0">
+                <TextBlock Text="Simple Control" VerticalAlignment="Center" 
+                         FontSize="20" FontWeight="SemiBold" Margin="10,0,0,0"/>
+            </StackPanel>
+
+            <!-- Generate QR Button -->
+            <Button Grid.Column="1" 
+                    Style="{StaticResource PrimaryButton}"
+                    Height="30"
+                    Width="120"
+                    Margin="20 0"
+                    Name="GenerateQRButton">
+                <TextBlock Text="Generate QR Code" 
+                          FontWeight="SemiBold"/>
+            </Button>
+        </Grid>
+
+        <!-- Main Content -->
+        <Grid Grid.Row="1" Margin="20">
+            <!-- Initial State / QR Code -->
+            <TextBlock Text="No devices connected" HorizontalAlignment="Center" 
+                     VerticalAlignment="Center" FontSize="18" Name="NoDevicesText"
+                     Visibility="Collapsed"/>
+
+            <Image Name="QRCodeImage" Visibility="Collapsed" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Width="200" Height="200"/>
+
+            <!-- Connected Devices List -->
+            <ListView Name="DevicesList" Margin="0,20,0,0" ItemsSource="{Binding ConnectedDevices}">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        <Setter Property="Padding" Value="0"/>
+                        <Setter Property="Margin" Value="0,0,0,10"/>
+                        <Setter Property="Background" Value="#F8F9FA"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+
+                <!-- DataTemplate for the ListViewItem -->
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Device Info -->
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="{Binding ConnectedDevice.DeviceName}" FontWeight="SemiBold" FontSize="16"/>
+                                <TextBlock Text="{Binding ConnectedDevice.OSVersion}" Foreground="#666666" Margin="0,5,0,0"/>
+                                <TextBlock Text="{Binding ConnectedDevice.ConnectedSince}" Foreground="#666666" Margin="0,5,0,0"/>
+                            </StackPanel>
+
+                            <!-- Disconnect Button -->
+                            <Button Grid.Column="1" 
+                        Style="{StaticResource DangerButton}"
+                        Margin="10,0,0,0"
+                        Command="{Binding ShowDisconnectConfirmModalCommand}"
+                        Width="100"
+                        Height="30">
+                                <TextBlock Text="Disconnect" FontWeight="Medium"/>
+                            </Button>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+
+        <!-- Modal -->
+        <custom:Modal Grid.RowSpan="2" Panel.ZIndex="1" IsOpen="{Binding IsOpen}">
+            <ContentControl Content="{Binding CurrentModalViewModel}" />
+        </custom:Modal>
+
+        <ItemsControl Grid.Row="1" Panel.ZIndex="1" ItemsSource="{Binding Toasts}" 
+               VerticalAlignment="Bottom" HorizontalAlignment="Right" 
+               Margin="0 0 0 10">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+
+    </Grid>
+</Window>
