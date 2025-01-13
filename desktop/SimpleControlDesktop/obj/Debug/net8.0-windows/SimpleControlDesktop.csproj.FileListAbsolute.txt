@@ -187,3 +187,4 @@ D:\programming\SimpleControl\desktop\SimpleControlDesktop\bin\Debug\net8.0-windo
 D:\programming\SimpleControl\desktop\SimpleControlDesktop\bin\Debug\net8.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 D:\programming\SimpleControl\desktop\SimpleControlDesktop\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 D:\programming\SimpleControl\desktop\SimpleControlDesktop\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+D:\programming\SimpleControl\desktop\SimpleControlDesktop\obj\Debug\net8.0-windows\SimpleControlDesktop.sourcelink.json

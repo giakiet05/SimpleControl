@@ -8,7 +8,7 @@ namespace SimpleControlDesktop.Models
 {
     public class UserPhone
     {
-        public Guid Id = Guid.NewGuid();
+        public Guid Id { get; set; }
         public Guid UserId { get; set; }
         public Guid PhoneId { get; set; }
 

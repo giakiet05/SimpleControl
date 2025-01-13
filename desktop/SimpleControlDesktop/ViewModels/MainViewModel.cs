@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Diagnostics;
 using SimpleControlDesktop.Server;
 using SimpleControlDesktop.Models;
+using System.Windows;
 
 namespace SimpleControlDesktop.ViewModels
 {
@@ -55,6 +56,8 @@ namespace SimpleControlDesktop.ViewModels
                 OSVersion = "Android",
 
             }));
+
+           
 
             InitializationTask = InitializeAsync();
         }

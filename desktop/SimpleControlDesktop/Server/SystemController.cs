@@ -1,7 +1,9 @@
 ﻿using Microsoft.Win32;
 using NAudio.CoreAudioApi;
 using System.Diagnostics;
+using System.Drawing;
 using System.Management;
+using System.Windows.Forms;
 
 namespace SimpleControlDesktop.Server
 {
@@ -90,11 +92,40 @@ namespace SimpleControlDesktop.Server
             });
         }
 
-        private static ManagementEventWatcher _powerEventWatcher;
+        public static void PrintScreen(string filePath = "screenshot.png")
+        {
+            try
+            {
+                // Define the bounds of the screen (full screen)
+                Rectangle bounds = Screen.GetBounds(Point.Empty);
 
-        public static event Action<string> PowerStateChanged;
+                // Create a bitmap object with the same size as the screen
+                using (Bitmap bitmap = new Bitmap(bounds.Width, bounds.Height))
+                {
+                    // Create a graphics object to capture the screen
+                    using (Graphics g = Graphics.FromImage(bitmap))
+                    {
+                        // Capture the screenshot and store it in the bitmap
+                        g.CopyFromScreen(Point.Empty, Point.Empty, bounds.Size);
+                    }
 
-      
+                    // Save the screenshot to the specified file path
+                    bitmap.Save(filePath, System.Drawing.Imaging.ImageFormat.Png);
+                }
+
+                Console.WriteLine($"Screenshot saved to {filePath}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error capturing screenshot: {ex.Message}");
+            }
+        }
+
+        public static string GetDesktopName()
+        {
+            return Environment.MachineName;
+        }
+
     }
 }
 
